@@ -1,16 +1,16 @@
-# 🏦 Sistema Batch de Processamento de Transações Bancárias
+# Sistema Batch de Processamento de Transações Bancárias
 
 ![COBOL](https://img.shields.io/badge/COBOL-OS%2FVS_ANSI--74-blue)
 ![Mainframe](https://img.shields.io/badge/Mainframe-z%2FOS_MVS-lightgrey)
 ![JCL](https://img.shields.io/badge/JCL-Job_Control_Language-orange)
 
-## 📖 Sobre o Projeto
+## Sobre o Projeto
 
 Este projeto consiste no desenvolvimento de um sistema completo de processamento em lote (Batch) executado em ambiente Mainframe, focado em atualizar saldos bancários a partir de arquivos transacionais diários. O desafio central foi projetar e implementar uma arquitetura clássica de **Match/Merge**, garantindo a conciliação impecável entre um Arquivo Mestre de Clientes e um Arquivo de Transações de Crédito e Débito.
 
 O código foi desenvolvido de forma nativa e aderente às rígidas especificações do compilador **OS/VS COBOL (Padrão ANSI-74)**, consolidando conhecimentos profundos em lógica estruturada, controle de fluxo e manipulação de arquivos sequenciais (QSAM).
 
-## 🚀 Principais Funcionalidades
+## Principais Funcionalidades
 
 - **Match/Merge Preciso:** Lógica de *balance line* avançada para varrer e conciliar simultaneamente dois arquivos previamente ordenados pelo `ID` do cliente, aplicando transações sequenciais com alto desempenho.
 - **Validação Rigorosa de Dados:**
@@ -24,14 +24,14 @@ O código foi desenvolvido de forma nativa e aderente às rígidas especificaç�
   - Bloco visual isolado listando exclusivamente as inconsistências e erros detectados.
   - Painel global final de **Estatísticas de Processamento**, contabilizando com precisão as linhas lidas e operações realizadas.
 
-## 🛠 Tecnologias e Ferramentas
+## Tecnologias e Ferramentas
 
 - **Linguagem:** COBOL (OS/VS COBOL ANSI-74)
 - **Scripting:** JCL (Job Control Language)
 - **Utilitários de Sistema:** `IEBGENER` (para criação dinâmica da massa de dados) e `SORT` (ordenação nativa de chaves).
 - **Ambiente de Execução:** Emulador de Mainframe TK5 / MVS 3.8j.
 
-## 🧠 Desafios de Engenharia Superados
+## Desafios de Engenharia Superados
 
 Durante o desenvolvimento, destacou-se o diagnóstico e a resolução de vazamentos de fluxo lógico nativos do padrão ANSI-74. Devido à ausência de delimitadores explícitos modernos (como `END-IF` ou `END-READ`), a estrutura de repetição e execução do código exigiu uma arquitetura cirúrgica. 
 
@@ -62,7 +62,7 @@ BANKAPP/
 └── TRANSAC.TXT
 ````
 
-## 💻 Como Executar
+## Como Executar
 
 1. **Submissão dos Jobs:** Através do seu emulador de terminal (TSO/RFE ou submissão via leitora):
    - Faça o upload dos membros para as bibliotecas do PDS do seu Mainframe.
