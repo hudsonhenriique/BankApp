@@ -33,9 +33,11 @@ O código foi desenvolvido de forma nativa e aderente às rígidas especificaç�
 
 ## Desafios de Engenharia Superados
 
-Durante o desenvolvimento, destacou-se o diagnóstico e a resolução de vazamentos de fluxo lógico nativos do padrão ANSI-74. Devido à ausência de delimitadores explícitos modernos (como `END-IF` ou `END-READ`), a estrutura de repetição e execução do código exigiu uma arquitetura cirúrgica. 
+Durante o desenvolvimento do projeto, um dos principais desafios foi entender e corrigir problemas de fluxo de execução característicos do COBOL ANSI-74. Como essa versão da linguagem não possui recursos mais modernos, como `END-IF` e `END-READ`, foi necessário ter bastante cuidado com a organização dos parágrafos e com o controle da lógica do programa.
 
-O problema clássico de *Fall-Through* — onde uma única transação poderia acionar erroneamente lógicas sequenciais não correlatas — foi mitigado através da técnica de delimitação rigorosa do laço principal utilizando o comando `PERFORM ... THRU`. O uso de técnicas avançadas de rastreio em *log* (`DISPLAY`) permitiu auditar os acumuladores e provar a estanqueidade dos parágrafos, alcançando uma exatidão matemática irretocável na compilação final.
+Em alguns testes, identifiquei um problema conhecido como *Fall-Through*, em que uma mesma transação acabava passando por rotinas que não deveriam ser executadas, gerando resultados incorretos. Após analisar os logs e acompanhar a execução passo a passo utilizando comandos `DISPLAY`, foi possível localizar a origem do problema e ajustar a estrutura do processamento utilizando `PERFORM ... THRU`.
+
+Esse processo de investigação foi importante para garantir que cada transação fosse tratada corretamente, que os acumuladores fossem atualizados apenas quando necessário e que os relatórios finais apresentassem informações consistentes. Além de atender aos requisitos do projeto, a experiência proporcionou um aprendizado prático sobre depuração e controle de fluxo em ambientes Mainframe utilizando COBOL clássico.
 
 ## Estrutura do Projeto
 
