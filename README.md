@@ -54,16 +54,18 @@ BANKAPP/
 │   └── RELATORIO2.png
 │
 ├── src/
-│   └── cobol/
-│       └── bancario.cbl
-│
-├── jcl/
-│   ├── compila.jcl
-│   ├── criaarq.jcl
-│   └── executa.jcl
+│   ├── cobol/
+│   │   └── bancario.cbl
+│   │
+│   └── jcl/
+│       ├── compila.jcl
+│       ├── criaarq.jcl
+│       └── executa.jcl
 │
 ├── CLIENTES.TXT
-└── TRANSAC.TXT
+├── TRANSAC.TXT
+│
+└── README.md
 ````
 
 ## Como Executar
