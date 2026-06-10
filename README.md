@@ -6,9 +6,11 @@
 
 ## Sobre o Projeto
 
-Este projeto consiste no desenvolvimento de um sistema completo de processamento em lote (Batch) executado em ambiente Mainframe, focado em atualizar saldos bancários a partir de arquivos transacionais diários. O desafio central foi projetar e implementar uma arquitetura clássica de **Match/Merge**, garantindo a conciliação impecável entre um Arquivo Mestre de Clientes e um Arquivo de Transações de Crédito e Débito.
+Este projeto foi desenvolvido com o objetivo de simular o processamento diário de transações bancárias em um ambiente Mainframe. A proposta consiste em ler um arquivo de clientes e um arquivo de transações, aplicando créditos e débitos aos respectivos clientes e gerando relatórios com os resultados do processamento.
 
-O código foi desenvolvido de forma nativa e aderente às rígidas especificações do compilador **OS/VS COBOL (Padrão ANSI-74)**, consolidando conhecimentos profundos em lógica estruturada, controle de fluxo e manipulação de arquivos sequenciais (QSAM).
+Para isso, foi implementada uma lógica de Match/Merge, técnica bastante utilizada em processamento batch, que permite comparar e processar simultaneamente dois arquivos ordenados pela mesma chave. Dessa forma, foi possível localizar os clientes correspondentes às transações, atualizar seus saldos e tratar situações de inconsistência durante a execução.
+
+O desenvolvimento foi realizado em OS/VS COBOL (ANSI-74), respeitando as limitações e características da linguagem da época. O projeto permitiu praticar conceitos importantes como processamento de arquivos sequenciais, controle de fluxo, validação de dados, tratamento de erros e geração de relatórios em ambiente Mainframe.
 
 ## Principais Funcionalidades
 
