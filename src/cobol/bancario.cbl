@@ -2,9 +2,7 @@
        PROGRAM-ID. BANCARIO.                            
        AUTHOR. HUDSON HENRIQUE.                         
        ENVIRONMENT                      DIVISION.       
-       CONFIGURATION                    SECTION.        
-       SOURCE-COMPUTER. IBM-370.                        
-       OBJECT-COMPUTER. IBM-370.                        
+       CONFIGURATION                    SECTION.                               
        INPUT-OUTPUT                     SECTION.        
        FILE-CONTROL.                                    
        SELECT ARQ-CLIENTES ASSIGN TO UT-S-CLIENTES. 
